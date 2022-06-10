@@ -4,7 +4,7 @@ import md from 'markdown-it';
 import Head from 'next/head';
 
 export async function getStaticPaths(){
-    const files = fs.readdirSync('html_tutorials');
+    const files = fs.readdirSync('css_tutorials');
     const paths = files.map(fileName => {
         const slug = fileName.replace('.md', '');
         return {
@@ -21,7 +21,7 @@ export async function getStaticPaths(){
 }
 
 export async function getStaticProps({params:{slug}}){
-    const fileName = fs.readFileSync(`html_tutorials/${slug}.md`, 'utf8');
+    const fileName = fs.readFileSync(`css_tutorials/${slug}.md`, 'utf8');
     const { data: frontmatter, content } = matter(fileName);
     return {
         props: {
@@ -31,7 +31,7 @@ export async function getStaticProps({params:{slug}}){
     }
 }
 
-export default function HtmlTutorial({frontmatter, content}) {
+export default function CssTutorial({frontmatter, content}) {
     return(
         <div className='mt-8 mb-8 mx-auto container'>
             <Head>
