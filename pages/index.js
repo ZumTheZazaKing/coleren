@@ -32,7 +32,7 @@ export default function Home() {
           button="Learn CSS"
           link="css"
           custom="bg-green-500 text-white"
-          bg="bg-blue-500"
+          bg="bg-blue-700"
         />
         <Section
           title="JavaScript"
