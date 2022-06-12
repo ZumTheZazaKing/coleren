@@ -9,7 +9,7 @@ import 'prismjs/components/prism-clike';
 import 'prismjs/components/prism-javascript';
 import 'prismjs/components/prism-markup';
 import 'prismjs/themes/prism.css';
-import { ChevronLeftIcon } from '@heroicons/react/outline'
+import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/outline'
 
 export async function getStaticPaths(){
     const files = fs.readdirSync('html_tutorials');
@@ -81,6 +81,23 @@ export default function HtmlTutorial({frontmatter, content}) {
                         code:frontmatter.code
                     }}
                 />
+            </div>
+            <br/>
+            <div className='flex-col sm:flex-row flex items-center justify-between'>
+                {frontmatter.previous ?
+                <LinkButton
+                    leftIcon={<ChevronLeftIcon className='h-5 w-5'/>}
+                    title={`Previous | ${frontmatter.previousTitle}`}
+                    link={frontmatter.previous}
+                    custom="bg-transparent color-black w-fit border-0 shadow-none hover:text-blue-500 transition-colors p-0 m-0"
+                 /> : <div></div>}
+                {frontmatter.next ? 
+                <LinkButton
+                    rightIcon={<ChevronRightIcon className='h-5 w-5'/>}
+                    title={`Next | ${frontmatter.nextTitle}`}
+                    link={frontmatter.next}
+                    custom="bg-transparent color-black w-fit border-0 shadow-none hover:text-blue-500 transition-colors p-0 m-0"
+                /> : <div></div>}
             </div>
         </div>
     )

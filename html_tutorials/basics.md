@@ -1,7 +1,13 @@
 ---
+id: 1
 title: 'HTML Basics'
 metaTitle: 'HTML Basics'
 metaDesc: 'HTML Basics'
+previous: ""
+previousTitle: ""
+nextTitle: 'HTML Tag Concept'
+next: 'html/tag-concept'
+
 tags:
   - html
 code:
@@ -102,5 +108,5 @@ You'll learn more about them later in this tutorial
 
 ## HTML Editors
 
-You can use Sublime Text or Visual Studio Code to work with HTML but you can also use Coleren's HTML Editor to work with HTML.
+You can use **Sublime Text** or **Visual Studio** Code to work with HTML but you can also use Coleren's HTML Editor to work with HTML.
 
