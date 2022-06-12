@@ -6,7 +6,7 @@ export default function Layout({ children }) {
       <header className='py-4 bg-blue-500'>
         <div className='container px-2 mx-auto flex items-center'>
           <Link href='/'>
-            <a className='text-2xl font-bold text-white'>Coleren</a>
+            <a className='text-2xl font-bold text-white px-4 sm:p-0'>Coleren</a>
           </Link>
         </div>
       </header>

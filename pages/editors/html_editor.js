@@ -26,7 +26,7 @@ export default function HtmlEditor(){
             </div>
            
            <div className='flex flex-col sm:flex-row overflow-auto sm:overflow-hidden  grow'>
-                <div className="bg-slate-200 w-full sm:w-2/4 h-screen sm:h-full overflow-auto">
+                <div className="bg-zinc-100 w-full sm:w-2/4 h-screen sm:h-full overflow-auto">
                     <Editor
                         value={code}
                         onValueChange={code => setCode(code)}

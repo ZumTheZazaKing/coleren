@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function LinkButton({title, link, custom, query, newTab}){
+export default function LinkButton({title, link, custom, query, newTab, leftIcon, rightIcon}){
   return(
     <div className={`m-2 rounded-xl shadow-lg overflow-hidden flex flex-col ${custom}`}>
       <Link 
@@ -10,8 +10,10 @@ export default function LinkButton({title, link, custom, query, newTab}){
         }}
         as={`/${link}`}
       >
-        <a target={newTab ? "_blank" : ""}>
+        <a className="flex items-center" target={newTab ? "_blank" : ""}>
+          {leftIcon ? leftIcon : ""}
           <h1 className='p-4 font-semibold'>{title}</h1>
+          {rightIcon ? rightIcon : ""}
         </a>
       </Link>
     </div>
