@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import LinkButton from '../components/link_button';
 import Section from '../components/home_components/section';
 
 export default function Home() {

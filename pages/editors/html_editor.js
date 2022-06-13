@@ -19,14 +19,14 @@ export default function HtmlEditor(){
     }
 
     return (
-        <div className='h-screen w-screen flex-col flex fixed top-0 left-0 bg-slate-500 sm:truncate'>
+        <div className='h-screen w-full flex-col flex bg-slate-300 sm:truncate'>
             <Head><title>Coleren | HTML Editor</title></Head>
             <div onClick={run} className='p-4'>
                 <button className='bg-blue-500 text-white font-bold py-2 px-5 rounded-md shadow-md'>Run</button>
             </div>
            
            <div className='flex flex-col sm:flex-row overflow-auto sm:overflow-hidden  grow'>
-                <div className="bg-zinc-100 w-full sm:w-2/4 h-screen sm:h-full overflow-auto">
+                <div className="bg-zinc-100 w-full sm:w-2/4 h-screen sm:h-full overflow-auto sm:border-r-4 sm:border-slate-300">
                     <Editor
                         value={code}
                         onValueChange={code => setCode(code)}
@@ -38,7 +38,11 @@ export default function HtmlEditor(){
                         }}
                     />
                     </div>
-                <iframe src={iframeCode} title="output" className='w-full sm:w-2/4 h-screen sm:h-full bg-white overflow-auto p-0'/>
+                <iframe 
+                    src={iframeCode} 
+                    title="output" 
+                    className='w-full sm:w-2/4 h-screen sm:h-full bg-white overflow-auto p-0 sm:border-l-4 sm:border-slate-300'
+                />
            </div>
         </div>
     )

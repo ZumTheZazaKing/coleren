@@ -2,6 +2,32 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+*{
+    box-sizing: border-box;
+}
+
 textarea {
     outline: 0;
 }
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #3b82f6 #ffffff;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #3b82f6;
+    border-radius: 0px;
+    border: 3px none #ffffff;
+  }

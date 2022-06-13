@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function LinkButton({title, link, custom, query, newTab, leftIcon, rightIcon}){
   return(
-    <div className={`m-2 rounded-xl shadow-lg overflow-hidden flex flex-col ${custom}`}>
+    <div className={`m-2 rounded-xl overflow-hidden flex flex-col ${custom}`}>
       <Link 
         href={{
           pathname:`/${link}`,
