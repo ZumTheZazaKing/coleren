@@ -12,7 +12,7 @@ import 'prismjs/themes/prism.css';
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/outline'
 
 export async function getStaticPaths(){
-    const files = fs.readdirSync('css_tutorials');
+    const files = fs.readdirSync('tutorials/css_tutorials');
     const paths = files.map(fileName => {
         const slug = fileName.replace('.md', '');
         return {
@@ -29,7 +29,7 @@ export async function getStaticPaths(){
 }
 
 export async function getStaticProps({params:{slug}}){
-    const fileName = fs.readFileSync(`css_tutorials/${slug}.md`, 'utf8');
+    const fileName = fs.readFileSync(`tutorials/css_tutorials/${slug}.md`, 'utf8');
     const { data: frontmatter, content } = matter(fileName);
     return {
         props: {

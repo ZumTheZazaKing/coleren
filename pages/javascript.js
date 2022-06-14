@@ -6,10 +6,10 @@ import LinkButton from '../components/link_button';
 import { ChevronLeftIcon } from '@heroicons/react/outline';
 
 export async function getStaticProps(){
-    const files = fs.readdirSync('javascript_tutorials');
+    const files = fs.readdirSync('tutorials/javascript_tutorials');
     const tutorials = files.map(fileName => {
         const slug = fileName.replace('.md', '');
-        const readFile = fs.readFileSync(`javascript_tutorials/${fileName}`);
+        const readFile = fs.readFileSync(`tutorials/javascript_tutorials/${fileName}`);
         const { data: frontmatter } = matter(readFile);
 
         return {
