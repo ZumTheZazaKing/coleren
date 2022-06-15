@@ -7,6 +7,7 @@ previousTitle: "HTML Tag Concept"
 previous: "html/tag-concept"
 nextTitle: ""
 next: ""
+colorClass: "bg-red-500"
 tags:
   - html
 code: ""

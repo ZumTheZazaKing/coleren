@@ -7,6 +7,7 @@ previous: ""
 previousTitle: ""
 nextTitle: 'HTML Tag Concept'
 next: 'html/tag-concept'
+colorClass: "bg-red-500"
 
 tags:
   - html

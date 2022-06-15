@@ -4,6 +4,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { ChevronLeftIcon } from '@heroicons/react/outline';
 import LinkButton from '../components/link_button';
+import TutorialsLegend from '../components/tutorials_components/tutorials_legend';
 
 export async function getStaticProps(){
     const files = fs.readdirSync('tutorials/html_tutorials');
@@ -52,11 +53,13 @@ export default function HtmlHome({tutorials}) {
                 <h1 className='text-4xl font-bold text-center'>HTML Tutorials</h1>
             </header>
             <br/>
+            <TutorialsLegend/>
+            <br/>
             <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 p-4 md:p-0'>
                 {tutorials.sort(compare).map(({ slug, frontmatter }) => (
                     <div
                         key={slug}
-                        className='border border-gray-200 m-2 rounded-xl overflow-hidden flex flex-col hover:text-blue-500 transition-colors shadow-lg font-semibold'
+                        className={`border ${frontmatter.colorClass} text-white border-gray-200 m-2 rounded-xl overflow-hidden flex flex-col hover:text-blue-400 transition-colors shadow-lg font-semibold`}
                     >
                         <Link href={`/html/${slug}`}>
                             <a>
