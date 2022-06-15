@@ -75,11 +75,9 @@ export default function JavascriptTutorial({frontmatter, content}) {
                 </div>
                 <LinkButton 
                     title='Try it out' 
-                    link='editors/html_editor' 
+                    link={`editors/html_editor?code=${frontmatter.code}`} 
                     custom='bg-blue-500 text-white w-max py-0'
-                    query={{
-                        code:frontmatter.code
-                    }}
+                    newTab
                 />
             </div>
             <br/>

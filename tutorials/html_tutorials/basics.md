@@ -3,8 +3,6 @@ id: 1
 title: 'HTML Basics'
 metaTitle: 'HTML Basics'
 metaDesc: 'HTML Basics'
-previous: ""
-previousTitle: ""
 nextTitle: 'HTML Tag Concept'
 next: 'html/tag-concept'
 colorClass: "bg-red-500"

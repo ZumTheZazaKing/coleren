@@ -71,3 +71,11 @@ textarea {
   background-size: cover;
   background-attachment: fixed;
 }
+
+
+
+/* For Tutorials */
+img[src*='#center'] {
+  display: block;
+  margin: auto;
+}

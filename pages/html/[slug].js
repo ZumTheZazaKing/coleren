@@ -58,29 +58,31 @@ export default function HtmlTutorial({frontmatter, content}) {
             <br/>
             <div className='prose mx-auto'>
                 <h1>{frontmatter.title}</h1>
-                <div dangerouslySetInnerHTML={{ __html: md().render(content) }} />
+                <div dangerouslySetInnerHTML={{ __html: md().render(content) }}/>
             </div>
             <div className='mx-auto' style={{maxWidth:"65ch"}}>
-                <div className='rounded-md p-3 bg-zinc-100'>
-                    <Editor
-                        value={code ? code : ""}
-                        onValueChange={() => {return}}
-                        highlight={(code => highlight(code, languages.html))}
-                        padding={10}
-                        style={{
-                            fontFamily: '"Fira code", "Fira Mono", monospace',
-                            fontSize: 16,
-                        }}
-                    />
-                </div>
-                <LinkButton 
-                    title='Try it out' 
-                    link='editors/html_editor' 
-                    custom='bg-blue-500 text-white w-max py-0'
-                    query={{
-                        code:frontmatter.code
-                    }}
-                />
+                {code ? 
+                    <>
+                        <div className='rounded-md p-3 bg-zinc-100'>
+                            <Editor
+                                value={code ? code : ""}
+                                onValueChange={() => {return}}
+                                highlight={(code => highlight(code, languages.html))}
+                                padding={10}
+                                style={{
+                                    fontFamily: '"Fira code", "Fira Mono", monospace',
+                                    fontSize: 16,
+                                }}
+                            />
+                        </div>
+                        <LinkButton 
+                            title='Try it out' 
+                            link={`editors/html_editor?code=${frontmatter.code}`} 
+                            custom='bg-blue-500 text-white w-max py-0'
+                            newTab
+                        />
+                    </>
+                : ""}
             </div>
             <br/>
             <div className='flex-col sm:flex-row flex items-center justify-between'>

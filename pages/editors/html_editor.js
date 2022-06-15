@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 import Head from 'next/head';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Editor from 'react-simple-code-editor';
 import { highlight, languages } from 'prismjs/components/prism-core';
 import 'prismjs/components/prism-clike';
@@ -11,12 +11,18 @@ import 'prismjs/themes/prism.css'; //Example style, you can use another
 export default function HtmlEditor(){
 
     const router = useRouter();
-    const [code, setCode] = useState(router.query.code ? JSON.stringify(router.query.code).replace(/["\[\]:]/g,"").replace(/,/g,'\n') : "Write your code here...");
-    const [iframeCode, setIframeCode] = useState(router.query.code ? `data:text/html;charset=utf-8,${encodeURI(code)}` : `data:text/html;charset=utf-8,${encodeURI("This is where the output will be")}`)
+    const [code, setCode] = useState("Write your code here...");
+    const [iframeCode, setIframeCode] = useState(`data:text/html;charset=utf-8,${encodeURI("This is where the output will be")}`)
 
     const run = () => {
         setIframeCode(`data:text/html;charset=utf-8,${encodeURI(code)}`);
     }
+
+    useEffect(() => {
+        const updatedDefaultCode = JSON.stringify(String(router.query.code).split(",")).replace(/["\[\]:]/g,"").replace(/,/g,'\n');
+        setCode(updatedDefaultCode);
+        setIframeCode(`data:text/html;charset=utf-8,${encodeURI(updatedDefaultCode)}`);
+    },[router.query.code])
 
     return (
         <div className='h-screen w-full flex-col flex bg-slate-300 sm:truncate'>

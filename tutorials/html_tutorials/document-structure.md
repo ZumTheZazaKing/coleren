@@ -10,6 +10,43 @@ next: ""
 colorClass: "bg-red-500"
 tags:
   - html
-code: ""
+code: 
+  - '<html>'
+  - '<head>'
+  - '<title>Title goes here</title>'
+  - '</head>'
+  - '<body>'
+  - '<h1>Hello World</h1>'
+  - '</body>'
+  - '</html>'
 ---
-Hello World
+![HTML Document Structure](https://i.postimg.cc/3r9bfG9D/html-document-structure.png#center)
+
+Usually, a HTML document has everything enclosed in the `<html>` tag.
+
+```html
+<html>
+  Page content here
+</html>
+```
+
+All normal web pages consist of a `<head>` and a `<body>`.
+
+The `<head>` is where you put all the meta tags, links, and other information that you want to be available on all pages but not shown directly on the page.
+
+```html
+<head>
+  Head content here  
+<head>
+```
+
+The `<body>` is where you put the content that you want to be shown on the page.
+
+```html
+<body>
+  Body content here
+</body>
+```
+
+Here is a normal HTML structure;
+
