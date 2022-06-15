@@ -56,7 +56,7 @@ export default function CssHome({tutorials}) {
                 {tutorials.sort(compare).map(({ slug, frontmatter }) => (
                     <div
                         key={slug}
-                        className='border border-gray-200 m-2 rounded-xl shadow-lg overflow-hidden flex flex-col font-bold'
+                        className='border border-gray-200 m-2 rounded-xl overflow-hidden flex flex-col hover:text-blue-500 transition-colors shadow-lg font-semibold'
                     >
                         <Link href={`/css/${slug}`}>
                             <a>

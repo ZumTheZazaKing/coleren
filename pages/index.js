@@ -10,36 +10,40 @@ export default function Home() {
       </Head>
       <main>
         <Section 
+          id="section1"
           title="Learn Coding" 
           desc="One step at a time" 
           button="Get Started" 
           link="tutorials" 
-          custom="bg-blue-500 text-white"
-          bg="bg-slate-300"
+          custom="bg-blue-500 text-white text-xl shadow-xl"
+          sectionCustom="text-white"
         />
         <Section 
+          id="section2"
           title="HTML" 
           desc="The skeleton of a web page" 
           button="Learn HTML" 
           link="html" 
-          custom="bg-green-500 text-white"
-          bg="bg-red-500"
+          custom="bg-red-700 text-white text-xl shadow-xl"
+          sectionCustom="text-white" 
         />
         <Section
+          id="section3"
           title="CSS"
           desc="The flesh of a web page"
           button="Learn CSS"
           link="css"
-          custom="bg-green-500 text-white"
-          bg="bg-blue-700"
+          custom="bg-blue-700 text-white text-xl shadow-xl"
+          sectionCustom="text-white"
         />
         <Section
+          id="section4"
           title="JavaScript"
           desc="The brain of a web page"
           button="Learn JavaScript"
           link="javascript"
-          custom="bg-green-500 text-white"
-          bg="bg-yellow-500"
+          custom="bg-yellow-500 text-white text-xl shadow-xl"
+          sectionCustom="bg-yellow-500"
         />
 
       </main>
