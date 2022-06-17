@@ -8,6 +8,7 @@ next: 'html/tag-concept'
 colorClass: "bg-red-500"
 tags:
   - html
+  - introduction
 ---
 
 ## What is HTML?

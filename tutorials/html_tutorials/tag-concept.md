@@ -10,14 +10,7 @@ next: "html/document-structure"
 colorClass: "bg-red-500"
 tags:
   - html
-code :
-  - '<head>'
-  - '<title>HTML Basics</title>'
-  - '</head>'
-  - '<body>'
-  - '<h1>HTML Basics</h1>'
-  - '<p>This is a paragraph.</p>'
-  - '</body>'
+  - introduction
 ---
 ## Elements vs. Tags
 

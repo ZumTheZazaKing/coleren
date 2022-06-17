@@ -10,6 +10,7 @@ next: "html/universal-attributes"
 colorClass: "bg-red-500"
 tags:
   - html
+  - introduction
 ---
 ![HTML Document Structure](https://i.postimg.cc/3r9bfG9D/html-document-structure.png#center)
 
