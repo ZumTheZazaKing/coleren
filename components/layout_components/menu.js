@@ -7,7 +7,7 @@ export default function Menu(){
         <>
             <div className='mx-4 hidden sm:flex items-center'>
                 <TutorialsButton/>
-                <Link href='/editors/html_editor'>
+                <Link href='/editors/html_editor?code=Write your code on the darker...'>
                     <a className='text-xl font-bold text-white px-4 sm:p-0 mx-4 hover:text-slate-200 transition-colors'>Editor</a>
                 </Link>
             </div>

@@ -33,7 +33,7 @@ export default function MobileMenu(){
                         <a onClick={() => setShowMenu(false)} className='text-2xl font-bold mt-4 px-4 sm:p-0'>Home</a>
                     </Link>
                     <MobileTutorialsButton setShowMenu={setShowMenu}/>
-                    <Link href="/editors/html_editor">
+                    <Link href="/editors/html_editor?code=Write your code on the darker...">
                         <a onClick={() => setShowMenu(false)} className='text-2xl font-bold mt-4 px-4 sm:p-0'>Editor</a>
                     </Link>
                 </div>

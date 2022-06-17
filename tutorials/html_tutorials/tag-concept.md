@@ -33,3 +33,14 @@ For instance, the HEAD element is always present even though the `<head>` tags a
 That's the difference between an element and a tag.
 
 Another example would be the following code sample where the `<html>` is not present but the code still works if tested. This is because a HTML document will always have the root HTML element even if the `<html>` tag is missing.
+
+```html
+<head>
+  <title>HTML Basics</title>
+</head>
+<body>
+  <h1>HTML Basics</h1>
+  <p>This is a paragraph.</p>
+</body>
+```
+[Try it out](/editors/html_editor?code=<head>,++<title>HTML+Basics</title>,</head>,<body>,++<h1>HTML+Basics</h1>,++<p>This+is+a+paragraph.</p>,</body>#special)

@@ -2,13 +2,8 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import md from 'markdown-it';
 import Head from 'next/head';
+import { useEffect } from 'react';
 import LinkButton from '../../components/link_button';
-import Editor from 'react-simple-code-editor';
-import { highlight, languages } from 'prismjs/components/prism-core';
-import 'prismjs/components/prism-clike';
-import 'prismjs/components/prism-javascript';
-import 'prismjs/components/prism-markup';
-import 'prismjs/themes/prism.css';
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/outline'
 
 export async function getStaticPaths(){
@@ -41,7 +36,17 @@ export async function getStaticProps({params:{slug}}){
 
 export default function HtmlTutorial({frontmatter, content}) {
 
-    const code = frontmatter.code ? JSON.stringify(frontmatter.code).replace(/["\[\]:]/g,"").replace(/,/g,'\n') : "";
+    useEffect(() => {
+        const tutorial = document.querySelector("#tutorial")
+        const links = tutorial.querySelectorAll('a');
+        for (var i = 0; i < links.length; i++) {
+           if(!(String(links[i].href).includes("#special")))return
+           else{
+                links[i].target = '_blank';
+                links[i].className = 'bg-blue-500 text-white w-max  rounded-xl p-3 font-semibold no-underline shadow-lg'
+           }
+        }
+    })
 
     return(
         <div className='mt-8 mb-8 px-5 mx-auto container'>
@@ -56,33 +61,9 @@ export default function HtmlTutorial({frontmatter, content}) {
                 custom="bg-transparent color-black w-fit border-0 shadow-none hover:text-blue-500 transition-colors p-0 m-0"
             />
             <br/>
-            <div className='prose mx-auto'>
+            <div id="tutorial" className='prose mx-auto'>
                 <h1>{frontmatter.title}</h1>
                 <div dangerouslySetInnerHTML={{ __html: md().render(content) }}/>
-            </div>
-            <div className='mx-auto' style={{maxWidth:"65ch"}}>
-                {code ? 
-                    <>
-                        <div className='rounded-md p-3 bg-zinc-100'>
-                            <Editor
-                                value={code ? code : ""}
-                                onValueChange={() => {return}}
-                                highlight={(code => highlight(code, languages.html))}
-                                padding={10}
-                                style={{
-                                    fontFamily: '"Fira code", "Fira Mono", monospace',
-                                    fontSize: 16,
-                                }}
-                            />
-                        </div>
-                        <LinkButton 
-                            title='Try it out' 
-                            link={`editors/html_editor?code=${frontmatter.code}`} 
-                            custom='bg-blue-500 text-white w-max py-0'
-                            newTab
-                        />
-                    </>
-                : ""}
             </div>
             <br/>
             <div className='flex-col sm:flex-row flex items-center justify-between'>
