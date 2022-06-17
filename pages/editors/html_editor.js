@@ -13,16 +13,16 @@ export default function HtmlEditor(){
 
     const router = useRouter();
     const [code, setCode] = useState("Write your code here...");
-    const [iframeCode, setIframeCode] = useState(`data:text/html;charset=utf-8,${encodeURI("This is where the output will be")}`)
+    const [iframeCode, setIframeCode] = useState(`data:text/html;charset=utf-8,${encodeURIComponent("This is where the output will be")}`)
 
     const run = () => {
-        setIframeCode(`data:text/html;charset=utf-8,${encodeURI(code)}`);
+        setIframeCode(`data:text/html;charset=utf-8,${encodeURIComponent(code)}`);
     }
 
     useEffect(() => {
         const updatedDefaultCode = JSON.stringify(String(router.query.code).split(",")).replace(/["\[\]]/g,"").replace(/,/g,'\n');
         setCode(updatedDefaultCode);
-        setIframeCode(`data:text/html;charset=utf-8,${encodeURI(updatedDefaultCode)}`);
+        setIframeCode(`data:text/html;charset=utf-8,${encodeURIComponent(updatedDefaultCode)}`);
     },[router.query.code])
 
     return (
