@@ -22,4 +22,4 @@ Here are the most used HTML universal attributes in web development:
 - [`dir`](html_tutorials/dir-attributel)
 - [`style`](html_tutorials/style-attribute)
 
-Find out more about them on their dedicated pages
+Find out more about them on their dedicated pages.

@@ -6,14 +6,16 @@ metaDesc: 'CSS Selectors'
 colorClass: "bg-red-500"
 previousTitle: "CSS Syntax"
 previous: "css/syntax"
-nextTitle: ""
-next: ""
+nextTitle: "CSS Combinators"
+next: "css/combinators"
 tags:
   - css
   - beginnings
   - selectors
 ---
 A CSS selector selects the HTML element(s) that will be affected by a CSS rule.
+
+> CSS selectors can be used in the `querySelector()` JavaScript method!
 
 
 ## The CSS element selector
@@ -25,7 +27,7 @@ p {
     color: orange;
 }
 ```
-[Try it out](/editors/html_editor?code=<html>,<head>,<style>,++p+{,++++text-align%3A+center;,++++color%3A+orange;,++},</style>,</head>,<body>,++<p>This+will+be+styled</p>,++<h2>This+will+not+be+styled</h2>,++<p>This+will+be+styled</p>,</body>,</html>#special)
+[Try it out](/editors/html_editor?code=<html>+,<head>+,<style>+,++p+{+,++++text-align%3A+center;+,++++color%3A+orange;+,++}+,</style>+,</head>+,<body>+,++<p>This+will+be+styled</p>+,++<h2>This+will+not+be+styled</h2>+,++<p>This+will+be+styled</p>+,</body>+,</html>#special)
 
 
 ## The CSS `id` selector
@@ -39,7 +41,7 @@ p {
     color: orange;
 }
 ```
-[Try it out](/editors/html_editor?code=<html>,<head>,<style>,++%23header+{,++++text-align%3A+center;,++++color%3A+orange;,++},</style>,</head>,<body>,++<h2+id='header'>This+is+a+styled+header</h2+id=>,++<p>This+is+a+non-styled+paragraph</p>,</body>,</html>#special)
+[Try it out](/editors/html_editor?code=<html>+,<head>+,<style>+,++%23header+{+,++++text-align%3A+center;+,++++color%3A+orange;+,++}+,</style>+,</head>+,<body>+,++<h2+id='header'>This+is+a+styled+header</h2+id=>+,++<p>This+is+a+non-styled+paragraph</p>+,</body>+,</html>#special)
 
 
 ## The CSS `class` selector
@@ -52,7 +54,7 @@ p {
     color: red;
 }
 ```
-[Try it out](/editors/html_editor?code=<html>,<head>,<style>,++%2Ered+{,++++color%3A+red;,++},</style>,</head>,<body>,++<h2+class='red'>This+is+Coleren</h2>,++<p+class='red'>Where+learning+is+a+continuos+process</p>,</body>,</html>#special)
+[Try it out](/editors/html_editor?code=<html>+,<head>+,<style>+,++%2Ered+{+,++++color%3A+red;+,++}+,</style>+,</head>+,<body>+,++<h2+class='red'>This+is+Coleren</h2>+,++<p+class='red'>Where+learning+is+a+continuos+process</p>+,</body>+,</html>#special)
 
 &nbsp;
 
@@ -62,7 +64,7 @@ p.red {
     color: red;
 }
 ```
-[Try it out](/editors/html_editor?code=<html>,<head>,<style>,++p%2Ered+{,++++color%3A+red;,++},</style>,</head>,<body>,++<h2+class='red'>This+will+not+be+affected+by+the+class</h2>,++<p+class='red'>This+will+though</p>,</body>,</html>#special)
+[Try it out](/editors/html_editor?code=<html>+,<head>+,<style>+,++p%2Ered+{+,++++color%3A+red;+,++}+,</style>+,</head>+,<body>+,++<h2+class='red'>This+will+not+be+affected+by+the+class</h2>+,++<p+class='red'>This+will+though</p>+,</body>+,</html>#special)
 
 &nbsp;
 
@@ -70,4 +72,63 @@ HTML elements can have multiple classes to refer to with the classes separated b
 ```css
 <p class="center large">This paragraph refers to two classes.</p>
 ```
-[Try it out](/editors/html_editor?code=<html>,<head>,<style>,++%2Ecenter+{,++++text-align%3A+center;,++},++%2Elarge+{,++++font-size%3A+20px;,++},</style>,</head>,<body>,++<p+class='large'>This+paragraph+refers+to+one+class</p>,++<p+class='large+center'>This+paragraph+refers+to+two+classes</p>,</body>,</html>#special)
+[Try it out](/editors/html_editor?code=<html>+,<head>+,<style>+,++%2Ecenter+{+,++++text-align%3A+center;+,++}+,++%2Elarge+{+,++++font-size%3A+20px;+,++}+,</style>+,</head>+,<body>+,++<p+class='large'>This+paragraph+refers+to+one+class</p>+,++<p+class='large+center'>This+paragraph+refers+to+two+classes</p>+,</body>+,</html>#special)
+
+> Remember: Class names can't start with numbers!
+
+
+## The CSS Universal Selector
+
+This will select all HTML elements on the page.
+```css
+* {
+    color: red;
+    text-align: center;
+}
+```
+[Try it out](/editors/html_editor?code=<html>+,<head>+,<style>+,++*+{+,++++color%3A+red;+,++++text-align%3A+center+,++}+,</style>+,</head>+,<body>+,++<h2>This+is+Coleren</h2>+,++<p>Where+learning+is+a+continuos+process</p>+,</body>+,</html>#special)
+
+
+## The CSS Grouping Selector
+- The grouping selector is used to select multiple elements and give them the same style definitions. 
+- To group selectors, you can use the comma character `,` to separate the selectors.
+
+So, this:
+```css
+h1 {
+    color: blue;
+    text-align: center;
+}
+h2 {
+    color: blue;
+    text-align: center;
+}
+p {
+    color: blue;
+    text-align: center;
+}
+```
+
+can be written as:
+
+```css
+h1, h2, p {
+    color: blue;
+    text-align: center;
+}
+```
+[Try it out](/editors/html_editor?code=<html>+,<head>+,<style>+,++h1%2C+h2%2C+p+{+,++++color%3A+blue;+,++++text-align%3A+center+,++}+,</style>+,</head>+,<body>+,++<h1>Heading1</h1>+,++<h2>Heading+2</h2>+,++<p>Paragraph</p>+,</body>+,</html>#special)
+
+&nbsp;
+
+These are just the simple and basic CSS selectors.
+
+CSS selectors can be divided into five categories:
+
+- **Simple selectors** _(the one we learn on this page)_
+- [Combinator selectors](combinators)
+- [Pseudo-class selectors](pseudo-class)
+- [Pseudo-element selectors](pseudo-element)
+- [Attribute selectors](attribute-selectors)
+
+Find out more about them on their dedicated pages.

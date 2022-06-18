@@ -27,4 +27,4 @@ The `style` attribute is one of many HTML universal attributes.
 <h1 style='color: red; text-align: center'>Hello World</h1>
 <p style='color: cyan'>Welcome To Coleren</p>
 ```
-[Try it out](/editors/html_editor?code=<h1+style='color%3A+red;+text-align%3A+center'>Hello+World</h1>,<p+style='color%3A+cyan'>Welcome+To+Coleren</p>#special)
+[Try it out](/editors/html_editor?code=<h1+style='color%3A+red;+text-align%3A+center'>Hello+World</h1>+,<p+style='color%3A+cyan'>Welcome+To+Coleren</p>#special)

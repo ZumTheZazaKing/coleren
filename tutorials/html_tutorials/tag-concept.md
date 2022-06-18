@@ -36,4 +36,4 @@ Another example would be the following code sample where the `<html>` is not pre
   <p>This is a paragraph.</p>
 </body>
 ```
-[Try it out](/editors/html_editor?code=<head>,++<title>HTML+Basics</title>,</head>,<body>,++<h1>HTML+Basics</h1>,++<p>This+is+a+paragraph.</p>,</body>#special)
+[Try it out](/editors/html_editor?code=<head>+,++<title>HTML+Basics</title>+,</head>+,<body>+,++<h1>HTML+Basics</h1>+,++<p>This+is+a+paragraph.</p>+,</body>#special)

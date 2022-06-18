@@ -37,7 +37,7 @@ function changeText() {
 }
 </script>
 ```
-[Try it out](/editors/html_editor?code=<html>,<body>,++<h1+id='text'>Hello+World!</h1>,++<button+onclick='changeText()'>Change+text</button>,+,++<script>,++++function+changeText(){,++++++document.getElementById('text').innerHTML+=+'Welcome+To+Coleren!';,++++},++</script>,</body>,</html>#special)
+[Try it out](/editors/html_editor?code=<html>+,<body>+,++<h1+id='text'>Hello+World!</h1>+,++<button+onclick='changeText()'>Change+text</button>+,++,++<script>+,++++function+changeText(){+,++++++document.getElementById('text').innerHTML+=+'Welcome+To+Coleren!';+,++++}+,++</script>+,</body>+,</html>#special)
 
 
 ## Example 2
@@ -57,7 +57,7 @@ The `id` attribute can also be used to style text with **CSS**. However, it is n
     <h1 id='text'>Coleren is Awesome!</h1>
 </body>
 ```
-[Try it out](/editors/html_editor?code=<head>,<style>,++%23text+{,++++color%3A+red;,++++text-align:+center;,++},</style>,</head>,<body>,++<h1+id='text'>Coleren+is+Awesome!</h1>,</body>#special)
+[Try it out](/editors/html_editor?code=<head>+,<style>+,++%23text+{+,++++color%3A+red;+,++++text-align:+center;+,++}+,</style>+,</head>+,<body>+,++<h1+id='text'>Coleren+is+Awesome!</h1>+,</body>#special)
 
 
 ## Example 3
@@ -71,4 +71,4 @@ The `id` attribute can also be used to link to an element with a specified id wi
 
 <a href='#top'>Back to Top</a>
 ```
-[Try it out](/editors/html_editor?code=<html>,<body>,++<h2+id='top'>Scroll+to+the+bottom</h2>,++<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>,++<p>Hello</p>,++<a+href='%23top'>Back+to+Top</a>,</body>,</html>#special)
+[Try it out](/editors/html_editor?code=<html>+,<body>+,++<h2+id='top'>Scroll+to+the+bottom</h2>+,++<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>+,++<p>Hello</p>+,++<a+href='%23top'>Back+to+Top</a>+,</body>+,</html>#special)

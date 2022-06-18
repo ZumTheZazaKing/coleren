@@ -20,7 +20,13 @@ export default function HtmlEditor(){
     }
 
     useEffect(() => {
-        const updatedDefaultCode = JSON.stringify(String(router.query.code).split(",")).replace(/["\[\]]/g,"").replace(/,/g,'\n');
+        const updatedDefaultCode = JSON.stringify(String(router.query.code).split(","))
+        .replace(/["\[\]]/g,"")
+        .replace(/ ,/g,'\n')
+        .replace(/brkt;/g,"[")
+        .replace(/;brkt/g,"]")
+        .replace(/dbq;/g,'"')
+
         setCode(updatedDefaultCode);
         setIframeCode(`data:text/html;charset=utf-8,${encodeURIComponent(updatedDefaultCode)}`);
     },[router.query.code])

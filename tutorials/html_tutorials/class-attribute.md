@@ -44,4 +44,4 @@ By adding multiple classes to an element, you can style it with CSS like this:
     <h1 class='header text'>Coleren is Awesome!</h1>
 </body>
 ```
-[Try it out](/editors/html_editor?code=<head>,<style>,++%2Eheader{,++++background-color%3A+red;,++},++%2Etext{,++++color%3A+white;,++++text-align%3A+center;,++},</style>,<body>,++<h1+class='header+text'>Coleren+is+Awesome!</h1>,<body>#special)
+[Try it out](/editors/html_editor?code=<head>+,<style>+,++%2Eheader{+,++++background-color%3A+red;+,++}+,++%2Etext{+,++++color%3A+white;+,++++text-align%3A+center;+,++}+,</style>+,<body>+,++<h1+class='header+text'>Coleren+is+Awesome!</h1>+,<body>#special)

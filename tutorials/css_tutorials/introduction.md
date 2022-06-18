@@ -36,4 +36,4 @@ p {
   font-size: 20px;
 }
 ```
-[Try it out](/editors/html_editor?code=<html>,<head>,<style>,++body+{,++++background-color%3A+burlywood;,++++text-align%3A+center,++},++h1+{,++++color%3A+lightblue;,++},++p+{,++++font-family%3A+Arial;,++++font-size%3A+20px;,++},</style>,</head>,<body>,++<h1>Coleren</h1>,++<p>Learn+Coding</p>,</body>,</html>#special)
+[Try it out](/editors/html_editor?code=<html>+,<head>+,<style>+,++body+{+,++++background-color%3A+burlywood;+,++++text-align%3A+center;+,++}+,++h1+{+,++++color%3A+lightblue;+,++}+,++p+{+,++++font-family%3A+Arial;+,++++font-size%3A+20px;+,++}+,</style>+,</head>+,<body>+,++<h1>Coleren</h1>+,++<p>Learn+Coding</p>+,</body>+,</html>#special)

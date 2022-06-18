@@ -30,7 +30,7 @@ HTML stands for HyperText Markup Language and it is a standard markup language f
 </body>
 </html>
 ```
-[Try it out](/editors/html_editor?code=<!DOCTYPE%20html>,<html>,<head>,++<title>HTML%20Basics</title>,</head>,<body>,++<h1>HTML%20Basics</h1>,++<p>This%20is%20a%20paragraph.</p>,</body>,</html>#special)
+[Try it out](/editors/html_editor?code=<!DOCTYPE%20html>+,<html>+,<head>+,++<title>HTML%20Basics</title>+,</head>+,<body>+,++<h1>HTML%20Basics</h1>+,++<p>This%20is%20a%20paragraph.</p>+,</body>+,</html>#special)
 
 
 The example above will be explained with the following...
@@ -79,7 +79,7 @@ The example above will be explained with the following...
 <h2>Heading 2</h2>
 <h3>Heading 3</h3>
 ```
-[Try it out](/editors/html_editor?code=<!DOCTYPE%20html>,<html>,<head>,++<title>HTML%20Headings</title>,</head>,<body>,++<h1>Heading%201</h1>,++<h2>Heading%202</h2>,++<h3>Heading%203</h3>,</body>,</html>#special)
+[Try it out](/editors/html_editor?code=<!DOCTYPE%20html>+,<html>+,<head>+,++<title>HTML%20Headings</title>+,</head>+,<body>+,++<h1>Heading%201</h1>+,++<h2>Heading%202</h2>+,++<h3>Heading%203</h3>+,</body>+,</html>#special)
 
 
 ## HTML Paragraphs
@@ -90,7 +90,7 @@ The example above will be explained with the following...
 <p>This is a paragraph.</p>
 <p>This is also a paragraph</p>
 ```
-[Try it out](/editors/html_editor?code=<!DOCTYPE%20html>,<html>,<head>,++<title>HTML%20Paragraphs</title>,</head>,<body>,++<p>This%20is%20a%20paragraph</p>,++<p>This%20is%20also%20a%20paragraph</p>,</body>,</html>#special)
+[Try it out](/editors/html_editor?code=<!DOCTYPE%20html>+,<html>+,<head>+,++<title>HTML%20Paragraphs</title>+,</head>+,<body>+,++<p>This%20is%20a%20paragraph</p>+,++<p>This%20is%20also%20a%20paragraph</p>+,</body>+,</html>#special)
 
 &nbsp;
 
@@ -115,4 +115,4 @@ You can use **Sublime Text** or **Visual Studio** Code to work with HTML but you
 </body>
 </html>
 ```
-[Try it out](/editors/html_editor?code=<!DOCTYPE%20html>,<html>,<head>,++<title>HTML%20Basics</title>,</head>,<body>,++<h1>HTML%20Basics</h1>,++<p>This%20is%20a%20paragraph.</p>,</body>,</html>#special)
+[Try it out](/editors/html_editor?code=<!DOCTYPE%20html>+,<html>+,<head>+,++<title>HTML%20Basics</title>+,</head>+,<body>+,++<h1>HTML%20Basics</h1>+,++<p>This%20is%20a%20paragraph.</p>+,</body>+,</html>#special)

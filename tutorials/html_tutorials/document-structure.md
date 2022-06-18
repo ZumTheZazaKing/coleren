@@ -47,11 +47,11 @@ Here is a normal HTML structure;
 ```html
 <html>
   <head>
-    Head content here
+    <title>Head content here</title>
   </head>
   <body>
     Body content here
   </body>
 </html>
 ```
-[Try it out](/editors/html_editor?code=<html>,++<head>,++++Head+content+here,++</head>,++<body>,++++Body+content+here,++</body>,</html>#special)
+[Try it out](/editors/html_editor?code=<html>+,++<head>+,++++<title>Head+content+here</title>+,++</head>+,++<body>+,++++Body+content+here+,++</body>+,</html>#special)

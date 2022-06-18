@@ -21,7 +21,7 @@ The `dir` attribute is one of many HTML universal attributes.
 ```html
 <div dir='ltr|rtl|auto'>
 ```
-[Try it out](/editors/html_editor?code=<p+dir='ltr'>Write+this+text+left-to-right!</p>,<p+dir='rtl'>Write+this+text+right+to+left!</p>,<p+dir='auto'>Write+this+text+based+on+the+content+of+the+element!</p>#special)
+[Try it out](/editors/html_editor?code=<p+dir='ltr'>Write+this+text+left-to-right!</p>+,<p+dir='rtl'>Write+this+text+right+to+left!</p>+,<p+dir='auto'>Write+this+text+based+on+the+content+of+the+element!</p>#special)
 
 - `ltr`, Left-to-right text direction
 - `rtl`, Right-to-left text direction

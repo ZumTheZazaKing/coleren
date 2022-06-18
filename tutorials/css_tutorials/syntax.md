@@ -57,7 +57,7 @@ p {
   background-color: black;
 }
 ```
-[Try it out](/editors/html_editor?code=<html>,<head>,<style>,++p+{,++++color%3A+red;,++++background-color%3A+black;,++},</style>,</head>,<body>,++<p>This+will+be+styled</p>,++<h2>This+will+not+be+styled</h2>,++<p>This+will+be+styled</p>,</body>,</html>#special)
+[Try it out](/editors/html_editor?code=<html>+,<head>+,<style>+,++p+{+,++++color%3A+red;+,++++background-color%3A+black;+,++}+,</style>+,</head>+,<body>+,++<p>This+will+be+styled</p>+,++<h2>This+will+not+be+styled</h2>+,++<p>This+will+be+styled</p>+,</body>+,</html>#special)
 
 ### Example explained
 

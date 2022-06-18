@@ -40,8 +40,11 @@ export default function CssTutorial({frontmatter, content}) {
         const tutorial = document.querySelector("#tutorial")
         const links = tutorial.querySelectorAll('a');
         for (var i = 0; i < links.length; i++) {
-            links[i].target = '_blank';
-            links[i].className = 'bg-blue-500 text-white w-max  rounded-xl p-3 font-semibold no-underline shadow-lg'
+           if(!(String(links[i].href).includes("#special")))return
+           else{
+                links[i].target = '_blank';
+                links[i].className = 'bg-blue-500 text-white w-max  rounded-xl p-3 font-semibold no-underline shadow-lg'
+           }
         }
     })
 
