@@ -52,6 +52,7 @@ const CssFilter = ({requiredTag, setRequiredTag}) => {
                         <p onClick={() => chooseFilter("selectors")} className={`${sharedClass} ${requiredTag === "selectors" && "text-white bg-blue-500"}`}>Selectors</p>
                         <p onClick={() => chooseFilter("pseudo-classes")} className={`${sharedClass} ${requiredTag === "pseudo-classes" && "text-white bg-blue-500"}`}>Pseudo-classes</p>
                         <p onClick={() => chooseFilter("pseudo-elements")} className={`${sharedClass} ${requiredTag === "pseudo-elements" && "text-white bg-blue-500"}`}>Pseudo-elements</p>
+                        <p onClick={() => chooseFilter("keywords")} className={`${sharedClass} ${requiredTag === "keywords" && "text-white bg-blue-500"}`}>Keywords</p>
                         <p onClick={() => chooseFilter("element-style")} className={`${sharedClass} ${requiredTag === "element-style" && "text-white bg-blue-500"}`}>Element style</p>
                     </div>
                 </Popover.Panel>

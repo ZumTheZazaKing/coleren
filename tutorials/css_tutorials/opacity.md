@@ -1,11 +1,11 @@
 ---
-id: 8
+id: 10
 title: 'CSS Opacity'
 metaTitle: 'CSS Opacity'
 metaDesc: 'CSS Opacity'
 colorClass: "bg-red-500"
-previousTitle: "CSS Attribute Selectors"
-previous: "css/attribute-selectors"
+previousTitle: "CSS inherit Keyword"
+previous: "css/inherit-keyword"
 nextTitle: ""
 next: ""
 tags:

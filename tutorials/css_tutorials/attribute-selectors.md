@@ -6,8 +6,8 @@ metaDesc: 'CSS Attribute Selectors'
 colorClass: "bg-blue-500"
 previousTitle: "CSS Pseudo-element"
 previous: "css/pseudo-element"
-nextTitle: ""
-next: ""
+nextTitle: "CSS inital Keyword"
+next: "css/initial-keyword"
 tags:
   - css
   - selectors
