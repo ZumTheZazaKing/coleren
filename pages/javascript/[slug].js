@@ -3,13 +3,7 @@ import matter from 'gray-matter';
 import md from 'markdown-it';
 import Head from 'next/head';
 import LinkButton from '../../components/link_button';
-import Editor from 'react-simple-code-editor';
 import { useEffect } from 'react';
-import { highlight, languages } from 'prismjs/components/prism-core';
-import 'prismjs/components/prism-clike';
-import 'prismjs/components/prism-javascript';
-import 'prismjs/components/prism-markup';
-import 'prismjs/themes/prism.css';
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/outline'
 
 export async function getStaticPaths(){
@@ -40,14 +34,17 @@ export async function getStaticProps({params:{slug}}){
     }
 }
 
-export default function JavascriptTutorial({frontmatter, content}) {
+export default function CssTutorial({frontmatter, content}) {
 
     useEffect(() => {
         const tutorial = document.querySelector("#tutorial")
         const links = tutorial.querySelectorAll('a');
         for (var i = 0; i < links.length; i++) {
-            links[i].target = '_blank';
-            links[i].className = 'bg-blue-500 text-white w-max  rounded-xl p-3 font-semibold no-underline shadow-lg'
+           if(!(String(links[i].href).includes("#special")))return
+           else{
+                links[i].target = '_blank';
+                links[i].className = 'bg-blue-500 text-white w-max  rounded-xl p-3 font-semibold no-underline shadow-lg'
+           }
         }
     })
 
@@ -64,7 +61,7 @@ export default function JavascriptTutorial({frontmatter, content}) {
                 custom="bg-transparent color-black w-fit border-0 shadow-none hover:text-blue-500 transition-colors p-0 m-0"
             />
             <br/>
-            <div className='prose mx-auto'>
+            <div id="tutorial" className='prose mx-auto'>
                 <h1>{frontmatter.title}</h1>
                 <div dangerouslySetInnerHTML={{ __html: md().render(content) }} />
             </div>
