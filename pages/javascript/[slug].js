@@ -34,7 +34,7 @@ export async function getStaticProps({params:{slug}}){
     }
 }
 
-export default function CssTutorial({frontmatter, content}) {
+export default function JSTutorial({frontmatter, content}) {
 
     useEffect(() => {
         const tutorial = document.querySelector("#tutorial")
